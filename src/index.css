@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;@import '@fontsource/inter/variable.css';@import '@fontsource/space-grotesk/variable.css';html,body,#root{height:100%}body{font-family:theme('fontFamily.sans');background:#0B0B0F}h1,h2,h3,h4{font-family:theme('fontFamily.display')}

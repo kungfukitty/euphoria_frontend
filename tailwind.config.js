@@ -1,0 +1,2 @@
+/** @type {import('tailwindcss').Config} */
+module.exports={content:['./index.html','./src/**/*.{js,jsx}'],theme:{extend:{colors:{onyx:'#0B0B0F',carbon:'#121217',magenta:'#FF1F8F',violet:'#6B2CFF',champagne:'#F5C451'},boxShadow:{soft:'0 10px 30px rgba(0,0,0,.4)',glow:'0 0 30px rgba(107,44,255,.35)'},borderRadius:{'2xl':'1.25rem'},fontFamily:{sans:['Inter Variable','Inter','system-ui','sans-serif'],display:['Space Grotesk Variable','Space Grotesk','Inter','system-ui','sans-serif']}}},plugins:[]};

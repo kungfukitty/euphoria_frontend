@@ -1,0 +1,1 @@
+export function formatEventDate(iso){try{const d=new Date(iso+'T00:00:00');const day=d.toLocaleDateString(undefined,{day:'2-digit'});const mon=d.toLocaleDateString(undefined,{month:'short'});return{day,mon}}catch{return{day:'--',mon:'--'}}}

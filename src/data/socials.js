@@ -1,0 +1,1 @@
+export const socials={instagram:import.meta.env.VITE_SOCIAL_INSTAGRAM||'https://instagram.com/',tiktok:import.meta.env.VITE_SOCIAL_TIKTOK||'https://tiktok.com/@',x:import.meta.env.VITE_SOCIAL_X||'https://x.com/',facebook:import.meta.env.VITE_SOCIAL_FACEBOOK||'https://facebook.com/',youtube:import.meta.env.VITE_SOCIAL_YOUTUBE||'https://youtube.com/'};

@@ -1,0 +1,1 @@
+const toArray=(g)=>Object.values(g);export const slides=toArray(import.meta.glob('../assets/hero/*.{jpg,jpeg,png,webp,mp4}',{eager:true,as:'url'}));export function altFromUrl(url){try{const base=url.split('/').pop().split('.').slice(0,-1).join('.');return base.replace(/[-_]/g,' ').trim()||'Euphoria hero image'}catch{return'Euphoria hero image'}}
