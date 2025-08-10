@@ -59,4 +59,33 @@ export default function Gallery() {
         <div className='fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4' onClick={close} role='dialog' aria-modal='true' aria-label='Image lightbox'>
           <button onClick={close} className='absolute top-4 right-4 text-white text-2xl' aria-label='Close'>×</button>
           <button onClick={prev} className='absolute left-2 md:left-8 text-white text-3xl select-none' aria-label='Previous'>‹</button>
-          <img src={active.data[lightbox.idx]} alt={altFrom(active.data[lightbox.idx])} className='max-h-[85vh] max-w-
+          <img src={active.data[lightbox.idx]} alt={altFrom(active.data[lightbox.idx])} className='max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-xl' />
+          <button onClick={next} className='absolute right-2 md:right-8 text-white text-3xl select-none' aria-label='Next'>›</button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+/**
+ * Cleans the image URL to create a human-readable caption.
+ * e.g., /assets/image-name.ab12cd34.jpg -> "image name"
+ */
+function pretty(url) {
+  try {
+    const fileName = url.split('/').pop();
+    const nameWithoutHash = fileName.replace(/\.[a-f0-9]{8}\./i, '.');
+    const nameWithoutExtension = nameWithoutHash.split('.').slice(0, -1).join('.');
+    return nameWithoutExtension.replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim();
+  } catch {
+    return 'Euphoria Image';
+  }
+}
+
+/**
+ * Creates a descriptive alt tag from the image URL.
+ */
+function altFrom(url) {
+  const base = pretty(url);
+  return base ? `Euphoria Gallery: ${base}` : 'Euphoria gallery image';
+}
